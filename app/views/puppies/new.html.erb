@@ -1,4 +1,4 @@
-<h1>Puppies#new</h1>
+<h1>Create a new puppy!</h1>
 
 <% if @puppy.errors.any? %>
   <% @puppy.errors.full_messages.each do |error|  %>
@@ -9,15 +9,20 @@
 <% end %>
 
 <%= form_for @puppy, url:'/puppies' do |f| %>
+  <p>
   <%= f.label :Name %>
   <%= f.text_field :name %>
+  </p>
+  <p>
   <%= f.label :Age %>
   <%= f.text_field :age %>
+  </p>
+  <p>
   <%= f.label :Breed %>
   <%= f.text_field :breed %>
-
+  </p>
   <%= f.submit %>
 <% end %>
 <br>
-<a href="/authors">Back</a>
+<%= link_to "Back", "/puppies" %>
 
