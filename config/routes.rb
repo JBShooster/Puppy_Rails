@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   post '/puppies', to: "puppies#create"
 
-  put '/puppies', to: "puppies#update"
+  put '/puppies/:id', to: "puppies#update"
 
   delete '/puppies/:id', to: "puppies#destroy" 
 
